@@ -1,19 +1,21 @@
 const links = [
     {
-        title: "Project1",
+        title: "Link1",
         description: "",
         image: ""
     },
 
     {
-        title: "Project1",
+        title: "Link2",
         description: "",
         image: ""
     },
     
     {
-        title: "Project1",
+        title: "Link3",
         description: "",
         image: ""
     }
 ]
+
+module.exports = links
