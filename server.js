@@ -39,20 +39,47 @@ app.get("/contactPage", (req, res)=> {
 })
 
 app.get("/linksPage", (req, res)=> {
+    for (let link of links) {
+		let splitName = link.title.split(' ');
+		for (let i = 0; i < splitName.length; i++) {
+			let splitWord = splitName[i].split('');
+			splitWord[0] = splitWord[0].toUpperCase();
+			splitName[i] = splitWord.join('');
+		}
+		link.title = splitName.join(' ');
+	}
     res.render("linksPage.ejs", {
-        links
+        links: links
     })
 })
 
 app.get("/pastWork", (req, res)=> {
+    for (let work of works) {
+		let splitName = work.title.split(' ');
+		for (let i = 0; i < splitName.length; i++) {
+			let splitWord = splitName[i].split('');
+			splitWord[0] = splitWord[0].toUpperCase();
+			splitName[i] = splitWord.join('');
+		}
+		work.title = splitName.join(' ');
+	}
     res.render("pastWork.ejs", {
-        works
+        works: works
     })
 })
 
 app.get("/staffPage", (req, res)=> {
+    for (let worker of staff) {
+		let splitName = worker.title.split(' ');
+		for (let i = 0; i < splitName.length; i++) {
+			let splitWord = splitName[i].split('');
+			splitWord[0] = splitWord[0].toUpperCase();
+			splitName[i] = splitWord.join('');
+		}
+		worker.title = splitName.join(' ');
+	}
     res.render("staffPage.ejs", {
-        staff
+        staff: staff
     })
 })
 
