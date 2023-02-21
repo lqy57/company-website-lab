@@ -19,7 +19,9 @@
     <ul>
         <% for(let i=0; i < links.length; i++) { %>
             <li>
-                <%= links[i].title %>
+                <a href="<%= links[i].link %>">
+                    <%= links[i].title %>
+                </a>
             </li>
             <% } %>
     </ul>
